@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-color: hsl(185, 41%, 84%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    #logo {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 15px 15px 0 0;
+        width: 100vw;
+        height: 100%;
+        padding: 25px;
+    }
+
+    #section-bill,
+    #section-percentage,
+    #section-people {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    #span-bill,
+    #span-percentage,
+    #span-people {
+        color: hsl(186, 14%, 43%);
+    }
+
+    #div-bill,
+    #div-people {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #input-bill,
+    #input-people {
+        border: none;
+        font-size: 24px;
+        color: hsl(183, 100%, 15%);
+        text-align: right;
+        width: 100%;
+    }
+    #input-bill:focus,
+    #input-people:focus {
+        outline: none;
+    }
+
+    #div-percentage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    .btnPercentage {
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        background-color: hsl(183, 100%, 15%);
+        color: white;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #input-custom {
+        border: none;
+        font-size: 24px;
+        font-weight: 700;
+        color: hsl(183, 100%, 15%);
+        text-align: right;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    #input-custom:focus{
+        outline: none;
+    }
+
+    #section-result {
+        width: 100%;
+        height: auto;
+        background-color: hsl(183, 100%, 15%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        border-radius: 15px;
+        padding: 30px;
+    }
+
+    #tip,
+    #total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #tip-text,
+    #total-text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #tip-amount,
+    #total-total {
+        color: white;
+        font-size: 18px;
+    }
+
+    #tip-person,
+    #total-person {
+        font-size: 12px;
+        color: hsl(186, 14%, 43%);
+    }
+
+    #tip-value,
+    #total-value {
+        color: hsl(172, 67%, 45%);
+        font-size: 28px;
+    }
+
+    #btnReset {
+        width: 100%;
+        height: 50px;
+        background-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+        font-size: 24px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .btnPercentage.selecionado {
+        color: hsl(183, 100%, 15%);
+        background-color: hsl(172, 67%, 45%);
+    }
+
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        background-color: hsl(185, 41%, 84%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+        height: 100vh;
+        width: 100vw;
+        padding: 150px;
+    }
+
+    #conteudo {
+        background-color: hsl(0, 0%, 100%);
+        padding: 30px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px hsl(189, 41%, 97%);
+        max-width: 900px;
+    }
+
+    #sections-input,
+    #section-result {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        width: 50%;
+        height: 100%;
+    }
+
+    #section-result {
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 15px;
+        padding: 30px;
+    }
+
+    #tip,
+    #total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #tip-text,
+    #total-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px
+    }
+
+    #tip-amount,
+    #total-total {
+        color: white;
+        font-size: 18px;
+    }
+
+    #tip-person,
+    #total-person {
+        color: hsl(184, 14%, 56%);
+    }
+
+    #tip-value,
+    #total-value {
+        font-size: 32px;
+        color: hsl(172, 67%, 45%);
+    }
+
+    #btnReset {
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        background-color: hsl(172, 67%, 45%);
+        border: none;
+        color: hsl(183, 100%, 15%);
+        border-radius: 5px;
+        margin-top: 90px;
+    }
+
+
+    #section-bill,
+    #section-people,
+    #section-percentage {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    #section-percentage {
+        height: 154px;
+    }
+
+    #span-bill,
+    #span-people,
+    #span-percentage {
+        color: hsl(186, 14%, 43%);
+    }
+
+    #div-bill,
+    #div-people {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #input-bill,
+    #input-people {
+        border: none;
+        font-size: 24px;
+        color: hsl(183, 100%, 15%);
+        text-align: right;
+        width: 100%;
+    }
+    #input-bill:focus,
+    #input-people:focus,
+    #input-custom:focus {
+        outline: none;
+    }
+
+    #div-percentage {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .btnPercentage {
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        background-color: hsl(183, 100%, 15%);
+        color: white;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #input-custom {
+        width: 100%;
+        height: 50px;
+        font-size: 24px;
+        border: none;
+        text-align: center;
+        color: hsl(183, 100%, 15%);
+    }
+
+    .btnPercentage.selecionado {
+        color: hsl(183, 100%, 15%);
+        background-color: hsl(172, 67%, 45%);
+    }
+
+    .btnPercentage:hover,
+    #btnReset {
+        cursor: pointer;
+    }
+    
+}
